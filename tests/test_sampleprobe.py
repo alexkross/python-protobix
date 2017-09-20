@@ -129,7 +129,7 @@ Check default configuration of the sample probe
 def test_default_configuration():
     pbx_test_probe = ProtobixTestProbe()
     pbx_test_probe.options = pbx_test_probe._parse_args([])
-    assert pbx_test_probe.options.config_file is None
+    assert pbx_test_probe.options.config_file == '/etc/zabbix/zabbix_agentd.conf'
     assert pbx_test_probe.options.debug_level is None
     assert pbx_test_probe.options.discovery is False
     assert pbx_test_probe.options.dryrun is False
